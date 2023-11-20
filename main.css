@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'JalnanGothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'yg-jalnan';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background-image: url("image/main_image/main_background.jpg");
   background-size: 1440px 1024px;
@@ -19,7 +33,7 @@ body {
   position: absolute;
   top: 899px;
   left: 128px;
-  font-family: Jalnan Gothic TTF;
+  font-family: JalnanGothic;
   font-weight: Regular;
   font-size: 24px;
   opacity: 1;
@@ -42,4 +56,43 @@ body {
   position: absolute;
   top: 705px;
   left: 370px;
+}
+
+.title_explain {
+  width: 550px;
+  color: rgba(158,157,162,1);
+  position: absolute;
+  top: 341px;
+  left: 104px;
+  font-family: Jalnan;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: left;
+}
+
+.title {
+  width: 419px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 380px;
+  left: 98px;
+  font-family: Jalnan;
+  font-weight: Regular;
+  font-size: 60px;
+  opacity: 1;
+  text-align: left;
+}
+
+.miniTitle {
+  width: 640px;
+  color: rgba(117,191,122,1);
+  position: absolute;
+  top: 40px;
+  left: 165px;
+  font-family: Jalnan;
+  font-weight: Regular;
+  font-size: 65px;
+  opacity: 1;
+  text-align: left;
 }
