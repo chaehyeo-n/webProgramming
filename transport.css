@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'JalnanGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.title {
+    color: black;
+    position: relative;
+    top: 50px;
+    font-family: yg-jalnan;
+    font-weight: Regular;
+    font-size: 50px;
+    opacity: 1;
+    text-align: center;
+  }
+
+  .miniTitle {
+    color: black;
+    position: relative;
+    top: 50px;
+    font-family: yg-jalnan;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: center;
+  }
+
+  .public {
+    width: 672px;
+    height: 500px;
+    background: url("image/transport_image/publicTransport_button.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    overflow:auto;
+    background-size: contain;
+  }
+
+  .private {
+    width: 672px;
+    height: 500px;
+    background: url("image/transport_image/privateTransport_button.png");
+    background-repeat: no-repeat;
+    opacity: 1;
+    position: absolute;
+    top: 200px;
+    left: 850px;
+    overflow: auto;
+    background-size: contain;
+  }
