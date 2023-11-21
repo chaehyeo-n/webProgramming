@@ -1,0 +1,182 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'JalnanGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    border: solid;
+    width: 1440px;
+    height: 1024px;
+}
+
+#map {
+    width: 900px;
+    height: 600px;
+    top: 200px;
+    left: 490px;
+    border: solid;
+    position: absolute;
+}
+
+.choose {
+    width: 436px;
+    height: 75px;
+    
+    border: solid;
+    border-color: rgb(141, 211, 187);
+    border-radius: 20px;
+    
+    font-size: 20px;
+    font-family: 'yg-jalnan';
+}
+
+.chooseText {
+    width: 70px;
+    height: 20px;
+    
+    background-color: white;
+    color: rgb(141, 211, 187);
+	
+    font-size: 16px;
+    font-family: 'yg-jalnan';
+    
+    position: absolute;
+    
+    left: 20px;
+    bottom: 32px;
+}
+
+#place_alert {
+    font-size: 30px;
+    color: gray;
+    text-align: center;
+}
+
+#place {
+    position: absolute;
+    left: 40px; 
+    top: 50px;
+}
+
+#placeInput {
+    font-family: JalnanGothic;
+    font-size: 25px;
+    
+    border: none;
+
+    width: 370px;
+    height: 50px;
+    
+    position: absolute;
+    left: 25px; 
+    top: 10px;
+}
+
+.place-pop-up {
+	z-index: 1;
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    
+    
+    width: 436px;
+    height: auto;
+    
+    background-color: whitesmoke;
+    
+    border: solid;
+    border-color: rgb(141, 211, 187);
+    border-radius: 20px;
+    
+    font-size: 20px;
+    visibility: hidden;
+}
+
+li::marker {
+	color: rgb(141, 211, 187);
+}
+
+.place_name {
+	font-weight: bold;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	font-size: 20px;
+}
+.road_address_name {
+	font-size: 18px;
+    font-family: JalnanGothic;
+}
+.jibun {
+	font-size: 15px;
+    font-family: JalnanGothic;
+    color: gray;
+}
+.tel {
+	font-size: 15px;
+    font-family: JalnanGothic;
+    color: rgb(113, 168, 148);
+}
+
+#pagination {
+    width: 436px;
+	margin:10px auto;
+	text-align: center;
+}
+#pagination a {
+	text-decoration-line: none;
+	display:inline-block;
+	margin-right:10px;
+	color:gray;
+}
+#pagination .on {
+	font-weight: bold; 
+	cursor: default;
+	color:rgb(141, 211, 187);
+}
+
+#places_list_result_wrapper {
+	overflow: auto;
+	
+	z-index: 0;
+	position: absolute;
+    left: 0px;
+    top: 180px;
+    
+    width: 436px;
+    height: 800px;
+}
+
+.places_result_item {
+	margin: 10px;
+	border: solid;
+	border-color:rgb(141, 211, 187);
+	border-radius: 20px;
+	background-color: whitesmoke;
+}
+
+#date {
+	z-index: 0;
+	position: absolute;
+    left: 0px;
+    top: 80px;
+	position: absolute;
+	margin-top: 20px;
+	font-family: yg-jalnan;
+	font-size: 60px;
+}
+
+#calander_img {
+	position: absolute;
+	bottom: 20px;
+}

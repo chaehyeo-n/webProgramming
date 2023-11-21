@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="calendar.css">
+  <script type="text/JavaScript" src="calendar.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+	<script>
+	const date = new Date();
+    const viewYear = date.getFullYear();
+    const viewMonth = date.getMonth() + 1;
+
+    document.addEventListener('DOMContentLoaded', function () {
+      updateMonthYear();
+    });
+
+    function updateMonthYear() {
+      document.querySelector('.month-year').textContent = `${getMonthName(viewMonth)} ${viewYear}`;
+    }
+
+    function getMonthName(month) {
+      const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      return months[month - 1];
+    }
+	</script>
+  <div class="calendar-wrap">
+  
+  
+  <div class="month-year"></div>
+       <div class="year-month"></div>
+       <button class="nav-btn go-prev">&lt;</button>
+       <button class="nav-btn go-next">&gt;</button>
+  <table class="calendar">
+    <thead>
+      <tr>
+        <th class="day-title" scope="col">Sun</th>
+        <th class="day-title" scope="col">Mon</th>
+        <th class="day-title" scope="col">Tue</th>
+        <th class="day-title" scope="col">Wed</th>
+        <th class="day-title" scope="col">Thu</th>
+        <th class="day-title" scope="col">Fri</th>
+        <th class="day-title" scope="col">Sat</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="week">
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+      </tr>
+      <tr class="week">
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+      </tr>
+      <tr class="week">
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+      </tr>
+      <tr class="week">
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+      </tr>
+      <tr class="week">
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+        <td class="day" tabindex="0"><span class="day-number"></span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <a class="button reset">Clear date-range</a>
+</div>
+
+</body>
+</html>
