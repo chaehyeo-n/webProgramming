@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>캘린더2</title>
+    <style>
+    input[type="date"] {
+        position: relative;
+        width: 150px;
+        height: 35px;
+        padding-right: 0 42px 0 16px;
+        background: url(ico_calendar.png) no-repeat right 21px center / 16px auto;
+        border: 2px solid rgb(141, 211, 187);
+        border-radius: 12px;
+        cursor: pointer; /* Trigger date picker when input box is clicked */
+    }
+    
+    input[type="date"]::webkit-clear-button,
+    input[type="date"]::webkit-inner-spin-button {display: none;}
+    
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        color: transparent;
+        cursor: pointer; /* 사용자 편의 */
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        background: url(ico_calendar.png) no-repeat right 21px center / 16px auto;
+        opacity: 0; /* Hide the default arrow */
+        cursor: pointer;
+    }
+    input[type="date"]::before{
+        content: attr(data-placeholder);
+        width: 100%;
+    }
+    input[type="date"]::before {
+        content: attr(data-placeholder);
+        width: 100%;
+        color: #bababa;
+        font-size: 14px;
+        padding-left: 5px;
+    }
+    input[type="date"].not-empty::before {
+        display: none;
+    }
+	</style>
+	<script>
+	    document.addEventListener('change', function(e) {
+	      if(e.target.type === 'date') {
+	        if(e.target.value) {
+	          e.target.classList.add('not-empty');
+	        } else {
+	          e.target.classList.remove('not-empty');
+	        }
+	      }
+	    });
+    </script>
+</head>
+<body>
+	<input type="date" data-placeholder="기간(시작!)" required> ~ <input type="date" data-placeholder="기간(종료!)" required>
+</body>
+</html>
