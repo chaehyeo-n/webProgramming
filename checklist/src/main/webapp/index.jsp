@@ -5,30 +5,6 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.HashMap" %>
 <link rel="stylesheet" type="text/css" href="style.css">
-<script type="text/JavaScript">
-	init();
-	
-	function init(){
-		document.querySelectorAll('li').forEach(function(li) {
-            li.addEventListener('click', Check);
-        });
-	}
-	
-	function Check(e){
-		checkSupplies(e);
-	}
-	
-	function checkSupplies(e){
-		const Supplies = e.target.querySelector('a');
-		if(e.target.querySelector('input[type="checkbox"]').checked){
-	        Supplies.style.color = "#dddddd";
-	        Supplies.style.textDecorationLine = "line-through";
-	    }else {
-	        Supplies.style.color = "#000000";
-	        Supplies.style.textDecorationLine = "none";
-	    }
-	} //수정하기
-</script>
 </head>
 <body>
 <!-- 사용자 추가 폼 -->
@@ -84,9 +60,9 @@
 
                 for (String item : checklist) {
         %>
-            <li>
+            <li class = "checklist-item">
                 <input type="checkbox" name="checkedItems" value="<%= item %>">
-                <%= item %>
+                <label for="<%= item %>"><%=item %></label>
                 <form action="DeleteChecklistItem" method="post" style="display: inline;">
                     <input type="hidden" name="selectedPerson" value="<%= selectedPerson %>">
                     <input type="hidden" name="itemToDelete" value="<%= item %>">
@@ -100,5 +76,21 @@
     </ul>
     </div>
 </div>
+<script>
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    
+    checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener('change', function () {
+            var label = this.nextElementSibling;
+            if (this.checked) {
+                label.style.color = 'gray';
+                label.style.textDecoration = 'line-through';
+            } else {
+                label.style.color = '';
+                label.style.textDecoration = '';
+            }
+        });
+    });
+</script>
 </body>
 </html>
