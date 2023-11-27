@@ -1,4 +1,3 @@
-/* styles.css */
 @font-face {
   font-family: 'JalnanGothic';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
@@ -106,10 +105,15 @@
 	position: relative;
 }
 
+.checklist-item {
+	max-height: 550px;
+	overflow-y: auto;
+}
+
 li {
     margin-bottom: 15px;
     margin-left: 50px;
     margin-top: 15px;
-    font-family: JalnanGothic; /*사람 이름 글씨체*/
+    font-family: JalnanGothic;
     position: relative;
 }
