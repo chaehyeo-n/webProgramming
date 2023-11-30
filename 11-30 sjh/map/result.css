@@ -1,0 +1,146 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'JalnanGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	position: relative;
+	
+    border: solid;
+    border-color: rgb(141, 211, 187);
+    border-radius: 20px;
+    
+    width: 1440px;
+    height: 1024px;
+}
+
+#map {
+    width: 900px;
+    height: 910px;
+    
+    border: solid;
+    border-color: rgb(141, 211, 187);
+    border-radius: 20px;
+    
+    position: absolute;
+    bottom: 60px;
+    right: 10px;
+}
+
+.choose {
+    width: 436px;
+    height: 75px;
+    
+    border: solid;
+    border-color: rgb(141, 211, 187);
+    border-radius: 20px;
+    
+    font-size: 20px;
+    font-family: 'yg-jalnan';
+}
+
+.chooseText {
+    width: auto;
+    height: 20px;
+    
+    background-color: white;
+    color: rgb(141, 211, 187);
+	
+    font-size: 16px;
+    font-family: 'yg-jalnan';
+    
+    position: absolute;
+    
+    left: 20px;
+    bottom: 32px;
+}
+
+#places_list_result_wrapper {
+	font-family: yg-jalnan;
+	font-size: 20px;
+	
+	overflow: auto;
+	
+	z-index: 0;
+	position: absolute;
+    left: 20px; 
+    bottom: 60px;
+    
+    width: 436px;
+    height: 800px;
+}
+
+#places_list_result {
+	padding-left: 10px;
+}
+
+.places_result_item {
+	position: relative;
+	height: auto;
+	min-height: 160px;
+	margin: 10px;
+	padding: 5px;
+	border: solid;
+	border-color:rgb(141, 211, 187);
+	border-radius: 20px;
+	background-color: whitesmoke;
+}
+
+li::marker {
+	color: rgb(141, 211, 187);
+}
+
+.place_name {
+	font-weight: bold;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	font-size: 20px;
+}
+.road_address_name {
+	font-size: 18px;
+    font-family: JalnanGothic;
+}
+.jibun {
+	font-size: 15px;
+    font-family: JalnanGothic;
+    color: gray;
+}
+.tel {
+	font-size: 15px;
+    font-family: JalnanGothic;
+    color: rgb(113, 168, 148);
+}
+
+#calander_img {
+	position: absolute;
+	bottom: 20px;
+}
+
+#date_text {
+    position: absolute;
+    left: 20px; 
+    top: 50px;
+}
+
+#what_day {
+	width: 436px;
+    height: 75px;
+    
+    border: none;
+    border-radius: 20px;
+    
+    padding-left: 20px;
+    
+    font-size: 25px;
+    font-family: 'yg-jalnan';
+}

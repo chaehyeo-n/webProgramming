@@ -1,0 +1,347 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'JalnanGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	position: relative;
+	
+    border: solid;
+    border-color: rgb(141, 211, 187);
+    border-radius: 20px;
+    
+    width: 1440px;
+    height: 1024px;
+}
+
+#map {
+    width: 900px;
+    height: 800px;
+    
+    border: solid;
+    border-color: rgb(141, 211, 187);
+    border-radius: 20px;
+    
+    position: absolute;
+    bottom: 60px;
+    right: 10px;
+}
+
+#submit_button {
+	font-family: JalnanGothic;
+	font-size: 20px;
+	
+    background-color: rgb(141, 211, 187);
+    border-radius: 10px;
+    border-color: rgb(113, 168, 148);
+    
+	position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+
+.choose {
+    width: 436px;
+    height: 75px;
+    
+    border: solid;
+    border-color: rgb(141, 211, 187);
+    border-radius: 20px;
+    
+    font-size: 20px;
+    font-family: 'yg-jalnan';
+}
+
+.chooseText {
+    width: auto;
+    height: 20px;
+    
+    background-color: white;
+    color: rgb(141, 211, 187);
+	
+    font-size: 16px;
+    font-family: 'yg-jalnan';
+    
+    position: absolute;
+    
+    left: 20px;
+    bottom: 32px;
+}
+
+#place_alert {
+    font-size: 30px;
+    color: gray;
+    text-align: center;
+}
+
+#place {
+    position: absolute;
+    left: 20px; 
+    top: 50px;
+}
+
+#placeInput {
+    font-family: yg-jalnan;
+    font-size: 25px;
+    
+    border: none;
+
+    width: 370px;
+    height: 50px;
+    
+    position: absolute;
+    left: 25px; 
+    top: 10px;
+}
+#placeInput::placeholder {
+	color: #bababa;
+}
+
+.place-pop-up {
+	z-index: 1;
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    
+    
+    width: 436px;
+    height: auto;
+    
+    background-color: whitesmoke;
+    
+    border: solid;
+    border-color: rgb(141, 211, 187);
+    border-radius: 20px;
+    
+    font-size: 20px;
+    visibility: hidden;
+}
+
+li::marker {
+	color: rgb(141, 211, 187);
+}
+
+.place_name {
+	font-weight: bold;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	font-size: 20px;
+}
+.road_address_name {
+	font-size: 18px;
+    font-family: JalnanGothic;
+}
+.jibun {
+	font-size: 15px;
+    font-family: JalnanGothic;
+    color: gray;
+}
+.tel {
+	font-size: 15px;
+    font-family: JalnanGothic;
+    color: rgb(113, 168, 148);
+}
+
+#pagination {
+    width: 436px;
+	margin:10px auto;
+	text-align: center;
+}
+#pagination a {
+	text-decoration-line: none;
+	display:inline-block;
+	margin-right:10px;
+	color:gray;
+}
+#pagination .on {
+	font-weight: bold; 
+	cursor: default;
+	color:rgb(141, 211, 187);
+}
+
+#places_list_result_wrapper {
+	overflow: auto;
+	
+	z-index: 0;
+	position: absolute;
+    left: 0px;
+    top: 80px;
+    
+    width: 436px;
+    height: 800px;
+}
+
+#places_list_result {
+	padding-left: 10px;
+}
+
+.places_result_item {
+	position: relative;
+	height: auto;
+	min-height: 160px;
+	margin: 10px;
+	padding: 5px;
+	border: solid;
+	border-color:rgb(141, 211, 187);
+	border-radius: 20px;
+	background-color: whitesmoke;
+}
+
+#calander_img {
+	position: absolute;
+	bottom: 20px;
+}
+
+.time_button {
+	position: absolute;
+	margin: 0px;
+	width: 30px;
+	font-family: yg-jalnan;
+	font-size: 20px;
+	border-radius: 10px;
+	background-color: darkgray;
+}
+.unselected .time_button {
+	visibility: hidden;
+}
+.selected .time_button {
+	visibility: visible;
+}
+
+#time_text {
+	margin: 1px;
+	text-align: right;
+}
+.unselected #time_select {
+	visibility: hidden;
+}
+.selected #time_select {
+	visibility: visible;
+}
+
+#time_select {
+	text-align: right;
+}
+
+.place_result #delete {
+	width: 100px;
+	height: 30px;
+	
+	font-family: yg-jalnan;
+	font-size: 17px;
+	color: white;
+	background-color: red;
+	
+	border-radius: 10px;
+}
+
+#aside_bottom {
+	position: absolute;
+	right: 3px;
+	bottom: 3px;
+}
+
+#time_button_group {
+	font-size: 20px;
+	position: relative;
+}
+
+#time_select input[type=time]::-webkit-datetime-edit-fields-wrapper,
+#time_select input[type=time]::-webkit-clear-button {
+	display: none;
+}
+
+#time_select input[type=time]::-webkit-datetime-edit-hour-field,
+#time_select input[type=time]::-webkit-datetime-edit-minute-field,
+#time_select input[type=time]::-webkit-datetime-edit-ampm-field,
+#time_select input[type=time]::-webkit-datetime-edit-text {
+	padding: 0px;
+	margin: 0px;
+}
+
+#date_range {
+    position: absolute;
+    left: 500px;
+    top: 50px;
+    background: url(../image/map_image/ico_calendar.png) no-repeat right 21px center / 40px auto;
+}
+
+#date_text {
+    position: absolute;
+    left: 980px;
+    top: 50px;
+}
+
+#what_day {
+	width: 436px;
+    height: 75px;
+    
+    border: none;
+    border-radius: 20px;
+    
+    padding-left: 20px;
+    
+    font-size: 25px;
+    font-family: 'yg-jalnan';
+}
+
+#way_to_go {
+	
+	font-family: JalnanGothic;
+	font-size: 20px;
+	
+    
+	position: absolute;
+    bottom: 10px;
+    right: 180px;
+    
+    padding-right: 0 42px 0 16px;
+    border: 2px solid rgb(141, 211, 187);
+    border-radius: 12px;
+    cursor: pointer; 
+}
+
+#way_to_go::webkit-clear-button,
+#way_to_go::webkit-inner-spin-button {display: none;}
+
+#way_to_go::-webkit-calendar-picker-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: transparent;
+    cursor: pointer; /* 사용자 편의 */
+}
+#way_to_go::-webkit-calendar-picker-indicator {
+    background: url(ico_calendar.png) no-repeat right 21px center / 16px auto;
+    opacity: 0; /* Hide the default arrow */
+    cursor: pointer;
+}
+#way_to_go::before{
+    content: attr(data-placeholder);
+    width: 100%;
+}
+#way_to_go::before {
+    content: attr(data-placeholder);
+    width: 100%;
+    color: #bababa;
+    font-size: 14px;
+    padding-left: 5px;
+}
+#way_to_go.not-empty::before {
+    display: none;
+}
